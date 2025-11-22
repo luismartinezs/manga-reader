@@ -1,28 +1,16 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { APP_LOGO, APP_TITLE } from "@/const";
-import { Streamdown } from 'streamdown';
+import MangaReader from "@/components/MangaReader";
 
 /**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * Home page - Manga Reader
+ * Displays manga pages with intuitive navigation
  */
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
+  // Placeholder pages - will be replaced with actual optimized images
+  const pages = [
+    "/pages/page-1.webp",
+    "/pages/page-2.webp",
+    "/pages/page-3.webp",
+  ];
 
-  // Use APP_LOGO (as image src) and APP_TITLE if needed
-
-  return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
-      </main>
-    </div>
-  );
+  return <MangaReader pages={pages} title="Manga Reader" />;
 }
